@@ -1,1 +1,1 @@
-window.onload = () => alert('hello world');
+window.onload = () => alert('hoge hoge');
