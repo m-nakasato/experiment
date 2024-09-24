@@ -1,1 +1,1 @@
-window.onload = () => alert('hoge piyo');
+window.onload = () => alert('piyo piyo');
