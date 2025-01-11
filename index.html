@@ -1,6 +1,95 @@
-<html>
-  <head>
-    <script src="test.js"></script>
-  </head>
-  <body></body>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>synthesizer3</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="container">
+  <input type="button" id="state" value="state"/>
+  <input type="button" id="resume" value="resume"/>
+  <input type="button" id="memChk" value="memChk"/>
+  <input type="button" id="keyA2" value="A2"/>
+  <div id="seq">
+    <label>bpm<input type="number" value="100" id="bpm" /></label> |
+    <label>skip<select id="skip"></select></label> |
+    <ol id="ch" start="0"></ol>
+    <input type="button" value="seq play" id="seqPlay"/>
+    <input type="button" value="seq stop" id="seqStop"/>
+    <textarea></textarea>
+  </div>
+  <div id="ctrl">
+    <input type="button" value="⏻" id="pwr" class="off">
+    <select id="waveform">
+      <option>sine</option>
+      <option>square</option>
+      <option>sawtooth</option>
+      <option>triangle</option>
+      <option value="noise">white noise</option>
+      <option value="fcPulse">FC pulse</option>
+      <option value="fcTriangle">FC triangle</option>
+      <option value="fcNoise">FC noise</option>
+      <option value="gbWave">GB wave</option>
+    </select>
+    <select id="tone">
+    </select>
+    <div>
+      <label>duration<input type="number" value="1" id="duration" placeholder=".03"/></label>sec |
+      <label>volume<input type="number" value="1" id="volume" placeholder="1"/></label> |
+      <label>detune<input type="number" value="" id="detune" placeholder="0" /></label>cent |
+      <label>sweep<input type="number" value="" id="sweep" placeholder="0" /></label>cent |<br/>
+      envelope
+      attack<input type="number" value="" id="envA" class="env" placeholder=".01" />
+      decay<input type="number" value="" id="envD" class="env" placeholder=".01" />
+      sustain<input type="number" value="" id="envS" class="env" placeholder=".5" />
+      release<input type="number" value="" id="envR" class="env" placeholder=".01" /> |<br/>
+      vibrato
+      <label>depth<input type="number" placeholder="20" id="vDepth" class="vib" /></label>
+      <label>rate<input type="number" value="" id="vRate" class="vib" placeholder="5" /></label>
+      wave<select id="vWave">
+      <option></option>
+      <option>sine</option>
+      <option>square</option>
+      <option>sawtooth</option>
+      <option>triangle</option>
+      </select>
+ |<br/>
+      tremolo
+      <label>depth<input type="number" placeholder=".15" id="tDepth" class="vib" /></label>
+      <label>rate<input type="number" value="" id="tRate" class="vib" placeholder="5" /></label>
+      wave<select id="tWave">
+      <option></option>
+      <option>sine</option>
+      <option>square</option>
+      <option>sawtooth</option>
+      <option>triangle</option>
+      </select>
+    </div>
+    <div id="cwt" class="hide">
+      custom wave table
+      <input type="button" value="load"/>
+      <table></table>
+      <input type="text" value="FFFFFFFFFFFFFFFF0000000000000000"/>
+    </div>
+    <input type="button" value="coin" id="coin"/>
+    <input type="button" value="game over" id="gameover"/>
+
+    <pre id="debug2"></pre>
+    <pre id="debug"></pre>
+  </div>
+  <div id="analyser">
+    <!--<canvas id="oscillo" width="256" height="256"></canvas>
+    <canvas id="spectrum" width="256" height="256"></canvas>-->
+    <canvas id="oscillo"></canvas>
+    <canvas id="spectrum"></canvas>
+  </div>
+  <div id="keyboard"></div>
+</div>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
 </html>

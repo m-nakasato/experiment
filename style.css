@@ -1,0 +1,137 @@
+* {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+  font-size: 32px;
+}
+
+body {
+  margin: 0;
+}
+
+#container {
+  _touch-action: none;
+  transform-origin: top left;
+  _width: 170px;
+  _width: 340px;
+  width: 680px;
+  _border: 1px solid green;
+}
+
+#ctrl input[type=number],
+#ctrl input[type=text] {
+  padding: 0 0.25em;
+}
+
+#duration {
+  width: 2em;
+}
+
+#volume {
+  width: 1.5em;
+}
+
+#detune,
+#sweep {
+  width: 3em;
+}
+
+input[type=checkbox] {
+  width: 1em;
+  transform: scale(2);
+  vertical-align: middle;
+}
+
+#ctrl .env,
+#ctrl .vib {
+  width: 2em;
+}
+
+#bpm {
+  width: 2em;
+}
+
+
+#analyser {
+  _background: blue;
+}
+
+canvas {
+  _border: 1px black solid;
+}
+
+#debug {
+  font: .5em courier;
+}
+
+#keyboard {
+  height: 16em;
+  overflow: scroll;
+}
+
+#keyboard input {
+  display: block;
+  border: 1px solid #000;
+  background: #fff;
+  height: 2em;
+  width: 5em;
+  text-align: right;
+  position: relative;
+}
+
+#keyboard input.short {
+  border: 1px solid #fff;
+  background: #000;
+  width: 2.5em;
+  margin: -1em 0;
+  z-index: 1000;
+  color: #fff;
+}
+
+#keyboard input.on {
+  background: #ccc;
+}
+
+#keyboard input.short.on {
+  background: #666;
+}
+
+#pwr {
+  color: red;
+}
+
+#pwr.off {
+  color: red;
+}
+
+#pwr.on {
+  color: limegreen;
+}
+
+#cwt.hide {
+  display: none;
+}
+
+#cwt {
+  _border: 1px solid blue;
+}
+
+#cwt table {
+  _border: 1px solid red;
+}
+
+#cwt td {
+  width: 1em;
+  line-height: .4em;
+  padding: 0;
+}
+
+#cwt input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#cwt input[type=radio] {
+  margin: 0;
+}
